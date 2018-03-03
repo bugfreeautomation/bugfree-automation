@@ -1,0 +1,74 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 22109411426,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.localSetUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "SSN Missing",
+        "description": "",
+        "id": "ssn-missing;ssn-missing",
+        "after": [
+          {
+            "result": {
+              "duration": 813775637,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closebrowser(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1446711774,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on Home page",
+            "match": {
+              "location": "StepDefs.i_am_on_Home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10199563769,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I select Let\u0027s Go button",
+            "match": {
+              "location": "StepDefs.i_select_Let_s_Go_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "SSN Missing",
+    "description": "",
+    "id": "ssn-missing",
+    "keyword": "Feature",
+    "uri": "src/test/resources/SSNMissing.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SSNMissing"
+      }
+    ]
+  }
+]
