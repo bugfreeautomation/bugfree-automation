@@ -1,15 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout from git’) {
+       stage('Checkout from git') {
             steps {
                 git 'https://github.com/bugfreeautomation/bugfree-automation/'
                 
             }
         }
-   stage('Compile Stage') {
+        stage('Compile Stage') {
             steps {
-                git 'https://github.com/bugfreeautomation/bugfree-automation/'
+            
                 dir('authframeworkAndroid') {
                     withMaven(maven : 'maven-3.3.9') {
                         sh 'mvn clean compile'
@@ -19,9 +19,9 @@ pipeline {
             }
         }
 
-             stage('Testing Stage') {
+            stage('Testing Stage') {
             steps {
-                git 'https://github.com/bugfreeautomation/bugfree-automation/'
+               
                 dir('authframeworkAndroid') {
                     withMaven(maven : 'maven-3.3.9') {
                         sh 'mvn test -Dcucumber.options="--tags @SSNMissing"'
