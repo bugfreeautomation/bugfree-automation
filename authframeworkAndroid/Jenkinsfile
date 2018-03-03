@@ -1,13 +1,8 @@
 pipeline {
     agent any
     stages {
-       stage('Checkout from git') {
-            steps {
-                git 'https://github.com/bugfreeautomation/bugfree-automation/'
-                
-            }
-        }
-        stage('Compile Stage') {
+      
+       stage('Compile Stage') {
             steps {
             
                 dir('authframeworkAndroid') {
