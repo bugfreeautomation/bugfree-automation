@@ -26,10 +26,20 @@ pipeline {
                     withMaven(maven : 'maven-3.3.9') {
                         sh 'mvn test -Dcucumber.options="--tags @SSNMissing"'
                     }
-                    cucumber fileIncludePattern: 'results/*.json', sortingMethod: 'ALPHABETICAL'
+                  cucumber fileIncludePattern: 'results/*.json', sortingMethod: 'ALPHABETICAL'
                 }
+                
+            }
+        }
+        stage('Reporting Stage') {
+            steps {
+               
+                dir('authframeworkAndroid') {
+                    
+                  cucumber fileIncludePattern: 'results/*.json', sortingMethod: 'ALPHABETICAL'
+                }
+                
             }
         }
     }
 }
-
