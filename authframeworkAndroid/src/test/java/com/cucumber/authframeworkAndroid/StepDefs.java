@@ -34,5 +34,6 @@ public class StepDefs {
 	public void i_select_Let_s_Go_button() throws Throwable {
 
 		hp.letsGoButton();
+		Thread.sleep(10000);
 	}
 }
